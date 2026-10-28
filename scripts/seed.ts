@@ -12,17 +12,17 @@ async function main() {
   const { auth } = await import("../src/lib/auth");
   const { buildRangeSlots, CLINIC_TIMEZONE } = await import("../src/lib/slots");
 
-  const adminEmail = process.env.SEED_ADMIN_EMAIL ?? "admin@medrella.test";
+  const adminEmail = process.env.SEED_ADMIN_EMAIL ?? "admin@outpatientbooking.test";
   const adminPassword = process.env.SEED_ADMIN_PASSWORD ?? "Admin123!";
-  const patientEmail = process.env.SEED_PATIENT_EMAIL ?? "patient@medrella.test";
+  const patientEmail = process.env.SEED_PATIENT_EMAIL ?? "patient@outpatientbooking.test";
   const patientPassword = process.env.SEED_PATIENT_PASSWORD ?? "Patient123!";
   const doctorPassword = process.env.SEED_DOCTOR_PASSWORD ?? "Doctor123!";
 
   const demoDoctors = [
-    { name: "Dr. Asha Rao", email: process.env.SEED_DOCTOR_EMAIL ?? "doctor@medrella.test", specialization: "Cardiology" },
-    { name: "Dr. Vikram Sen", email: "vikram.sen@medrella.test", specialization: "Dermatology" },
-    { name: "Dr. Meera Iyer", email: "meera.iyer@medrella.test", specialization: "Pediatrics" },
-    { name: "Dr. Arjun Patel", email: "arjun.patel@medrella.test", specialization: "General Medicine" },
+    { name: "Dr. Asha Rao", email: process.env.SEED_DOCTOR_EMAIL ?? "doctor@outpatientbooking.test", specialization: "Cardiology" },
+    { name: "Dr. Vikram Sen", email: "vikram.sen@outpatientbooking.test", specialization: "Dermatology" },
+    { name: "Dr. Meera Iyer", email: "meera.iyer@outpatientbooking.test", specialization: "Pediatrics" },
+    { name: "Dr. Arjun Patel", email: "arjun.patel@outpatientbooking.test", specialization: "General Medicine" },
   ];
 
   async function ensureUser(input: {
@@ -69,7 +69,7 @@ async function main() {
 
   console.log("Seeding accounts...");
   const admin = await ensureUser({
-    name: "Medrella Admin",
+    name: "Outpatient Booking Admin",
     email: adminEmail,
     password: adminPassword,
     role: "admin",

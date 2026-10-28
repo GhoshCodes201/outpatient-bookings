@@ -3,18 +3,18 @@ services:
     image: postgres:17-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: medrella
-      POSTGRES_PASSWORD: medrella
-      POSTGRES_DB: medrella
+      POSTGRES_USER: outpatient_booking
+      POSTGRES_PASSWORD: outpatient_booking
+      POSTGRES_DB: outpatient_booking
     ports:
       - "5432:5432"
     volumes:
-      - medrella_pgdata:/var/lib/postgresql/data
+      - outpatient_booking_pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U medrella -d medrella"]
+      test: ["CMD-SHELL", "pg_isready -U outpatient_booking -d outpatient_booking"]
       interval: 5s
       timeout: 5s
       retries: 10
 
 volumes:
-  medrella_pgdata:
+  outpatient_booking_pgdata:

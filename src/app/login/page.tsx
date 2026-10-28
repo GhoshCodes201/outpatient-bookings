@@ -30,7 +30,7 @@ export default async function LoginPage({
         <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
           <CalendarCheck className="h-6 w-6" />
         </div>
-        <h1 className="text-3xl font-semibold">Welcome back to Medrella</h1>
+        <h1 className="text-3xl font-semibold">Welcome back to Outpatient Booking</h1>
         <p className="mt-3 max-w-md text-muted-foreground">
           Sign in to book appointments, manage your visits, or open your doctor and admin workspace.
         </p>

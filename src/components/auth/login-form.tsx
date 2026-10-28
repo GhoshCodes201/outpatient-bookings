@@ -57,7 +57,7 @@ export function LoginForm({ next }: { next?: string }) {
       </Button>
 
       <p className="text-center text-sm text-muted-foreground">
-        New to Medrella?{" "}
+        New to Outpatient Booking?{" "}
         <Link href="/register" className="font-medium text-primary hover:underline">
           Create an account
         </Link>

@@ -1,6 +1,6 @@
-# Medrella
+# Outpatient Booking
 
-Medrella is a lightweight outpatient appointment booking application built with Next.js. Patients can find doctors and book open slots, doctors can manage availability and appointments, and admins can manage doctor accounts, slots, and bookings.
+Outpatient Booking is a lightweight outpatient appointment booking application built with Next.js. Patients can find doctors and book open slots, doctors can manage availability and appointments, and admins can manage doctor accounts, slots, and bookings.
 
 ## Features
 
@@ -52,15 +52,15 @@ Seeded accounts:
 
 | Role | Email | Password |
 | --- | --- | --- |
-| Admin | `admin@medrella.test` | `Admin123!` |
-| Doctor | `doctor@medrella.test` | `Doctor123!` |
-| Patient | `patient@medrella.test` | `Patient123!` |
+| Admin | `admin@outpatientbooking.test` | `Admin123!` |
+| Doctor | `doctor@outpatientbooking.test` | `Doctor123!` |
+| Patient | `patient@outpatientbooking.test` | `Patient123!` |
 
 Additional seeded doctor accounts use `Doctor123!`:
 
-- `vikram.sen@medrella.test`
-- `meera.iyer@medrella.test`
-- `arjun.patel@medrella.test`
+- `vikram.sen@outpatientbooking.test`
+- `meera.iyer@outpatientbooking.test`
+- `arjun.patel@outpatientbooking.test`
 
 New patient accounts can be created at `/register`.
 

@@ -15,7 +15,7 @@ export async function SiteHeader() {
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
             <Stethoscope className="h-5 w-5" />
           </span>
-          <span className="text-lg tracking-tight text-foreground">Medrella</span>
+          <span className="text-lg tracking-tight text-foreground">Outpatient Booking</span>
         </Link>
 
         <nav className="flex flex-wrap items-center gap-2 text-sm">

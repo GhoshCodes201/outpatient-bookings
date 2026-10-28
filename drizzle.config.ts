@@ -13,7 +13,7 @@ export default defineConfig({
       process.env.DATABASE_URL_UNPOOLED ||
       process.env.POSTGRES_URL_NON_POOLING ||
       process.env.DATABASE_URL ||
-      "postgresql://medrella:medrella@localhost:5432/medrella",
+      "postgresql://outpatient_booking:outpatient_booking@localhost:5432/outpatient_booking",
   },
   verbose: true,
   strict: true,
