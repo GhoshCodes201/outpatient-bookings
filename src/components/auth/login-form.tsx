@@ -9,6 +9,12 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { authClient } from "@/lib/auth-client";
 
+function homeForRole(role: string | null | undefined) {
+  if (role === "admin") return "/admin";
+  if (role === "doctor") return "/doctor";
+  return "/dashboard";
+}
+
 export function LoginForm({ next }: { next?: string }) {
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -22,7 +28,7 @@ export function LoginForm({ next }: { next?: string }) {
     const email = String(formData.get("email") ?? "");
     const password = String(formData.get("password") ?? "");
 
-    const { error: signInError } = await authClient.signIn.email({ email, password });
+    const { data, error: signInError } = await authClient.signIn.email({ email, password });
 
     if (signInError) {
       setError(signInError.message ?? "Could not sign in. Check your email and password.");
@@ -30,7 +36,8 @@ export function LoginForm({ next }: { next?: string }) {
       return;
     }
 
-    window.location.assign(next || "/dashboard");
+    const role = (data?.user as { role?: string } | undefined)?.role;
+    window.location.assign(next || homeForRole(role));
   }
 
   return (
