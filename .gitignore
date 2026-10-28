@@ -4,6 +4,7 @@ out/
 build/
 coverage/
 .env*
+!.env.example
 .vercel/
 *.pem
 *.tsbuildinfo
