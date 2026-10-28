@@ -1,5 +1,7 @@
 # Outpatient Booking
 
+**Live app:** <https://outpatient-bookings.vercel.app>
+
 Outpatient Booking is a lightweight outpatient appointment booking application built with Next.js. Patients can find doctors and book open slots, doctors can manage availability and appointments, and admins can manage doctor accounts, slots, and bookings.
 
 ## Features
